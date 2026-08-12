@@ -45,6 +45,6 @@ jobs:
           provenance: mode=max
           sbom: true
       - name: Verify package
-        run: docker run --rm ghcr.io/containerpak/freecad:main sh -c 'test -x /usr/bin/freecad && test -f /usr/share/applications/org.freecad.FreeCAD.desktop'
+        run: docker run --rm ghcr.io/containerpak/freecad:main sh -c 'test -x /usr/bin/freecad && test -x /opt/freecad/AppRun'
       - name: Publish summary
         run: echo "ghcr.io/containerpak/freecad@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"

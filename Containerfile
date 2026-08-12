@@ -11,6 +11,6 @@ FROM ghcr.io/containerpak/mesa:main
 
 COPY --from=source /squashfs-root /opt/freecad
 
-RUN ln -s /opt/freecad/usr/bin/FreeCAD /usr/bin/freecad && \
-    ln -s /opt/freecad/usr/share/applications/org.freecad.FreeCAD.desktop /usr/share/applications/org.freecad.FreeCAD.desktop && \
+RUN printf '#!/bin/sh\nexec /opt/freecad/AppRun "$@"\n' > /usr/bin/freecad && \
+    chmod 0755 /usr/bin/freecad && \
     cpak-clean-junk
