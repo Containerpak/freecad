@@ -7,7 +7,7 @@ ADD --checksum=sha256:3a853eb69ee595f779f2255dbf80a765926981d8ff68903cefee4dfb03
 RUN chmod 0755 /tmp/FreeCAD.AppImage && \
     /tmp/FreeCAD.AppImage --appimage-extract
 
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/mesa64:main
 
 COPY --from=source /squashfs-root /opt/freecad
 
