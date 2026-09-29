@@ -4,7 +4,7 @@
   "name": "FreeCAD",
   "description": "Parametric 3D CAD modeler.",
   "version": "1.1.3",
-  "image": "ghcr.io/containerpak/freecad@sha256:cf8275a88ae1cfaace0c08d0efb3b79d717435f8be9cce9ccd2b628468f73ee8",
+  "image": "ghcr.io/containerpak/freecad@sha256:7132963bff1371ee7bdc88c6ceee6ff7fe9c7838c520be154b90a9cea82d503f",
   "binaries": [
     "/usr/bin/freecad"
   ],
